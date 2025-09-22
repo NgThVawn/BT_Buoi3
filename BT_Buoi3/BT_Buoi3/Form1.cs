@@ -21,5 +21,20 @@ namespace BT_Buoi3
         {
 
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text == "admin" && txtpassword.Text == "admin")
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                LoginSuccessful obj = new LoginSuccessful();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại");
+            }
+        }
     }
 }
